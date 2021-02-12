@@ -2,9 +2,14 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 
+<nav class="navbar navbar-dark bg-dark">
+  <div class="navbar-brand"><b>Loja de Esporte</b></div>
+</nav>
+
 <body class="container">
 
-<h1 class="title">Lista de produtos</h1>
+
+<h2 class="title">Catálogo de Produtos</h2>
 
 <div class="row">
   <div class="product col-lg-3 col-md-6 mb-lg-0 mb-4" *ngFor="let produto of produtos" class="column">
@@ -12,38 +17,33 @@
       <p><img class="images card-img-top" src={{produto.imagem}}></p>
       <h4>{{produto.nome}}</h4>
       <p>{{produto.descricao}}</p>
-      <b>R$ {{produto.preco}}</b>
+      <b class="price">R$ {{produto.preco}}</b>
       <p>{{produto.estoque}} restantes</p>
-      <input type="button" class="btn btn-primary" value="Comprar" (click)=deletarProduto(produto.id)/>
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Comprar</button>
+      <!-- <input type="button" class="btn btn-primary" value="Comprar" (click)=deletarProduto(produto.id)/> -->
     </div>
   </div>
 </div>
 
-<table class="table">
-  <thead>
-    <tr>
-      <th scope="col">id</th>
-      <th scope="col">Nome</th>
-      <th scope="col">Descrição</th>
-      <th scope="col">Preço</th>
-      <th scope="col">Imagem</th>
-      <th scope="col">Estoque</th>
-      <th scope="col"></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let produto of produtos">
-      <td name="id">{{produto.id}}</td>
-      <td>{{produto.nome}}</td>
-      <td>{{produto.descricao}}</td>
-      <td>{{produto.preco}}</td>
-      <td><img class=images src={{produto.imagem}}></td>
-      <td>{{produto.estoque}}</td>
-      <td><input type="button" class="btn btn-primary" value="Comprar" (click)=deletarProduto(produto.id) /></td>
-    </tr>
-
-  </tbody>
-</table>
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 </body>
 
