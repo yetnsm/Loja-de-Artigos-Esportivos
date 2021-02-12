@@ -1,0 +1,52 @@
+.images {
+  max-width: 100px;
+  max-height: 100px;
+  align-self: center;
+  justify-self: center;
+  align-items: center;
+  justify-items: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.body {
+  background: #eee;
+}
+
+.title {
+  margin: 10px;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: center;
+  width: 50%;
+  padding: 10px;
+}
+
+.row {
+  margin: 10px;
+  align-items: center;
+  justify-items: center;
+  align-self: center;
+  justify-self: center;
+}
+
+.card {
+  background-color: white;
+  width: 100%;
+  height: 300px;
+}
+
+.product {
+  width: 30%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
