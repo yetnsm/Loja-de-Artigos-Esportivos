@@ -1,1 +1,43 @@
-Hello!
+<body class="container">
+
+	<h2 class="title">Novo Produto</h2>
+
+	<form>
+		<div class="form-group">
+			<label for="inputNome">Nome</label>
+			<input type="text" class="form-control" id="nome" name="nome" #n placeholder="Ex.: Bola de Volei" required>
+    </div>
+
+		<div class="form-group">
+      <label for="inputDescricao">Descrição</label>
+      <input type="text" class="form-control" id="descricao" name="descricao" #d placeholder="Ex.: Penalty 8.0 Pro Lançamento" required>
+    </div>
+
+		<div class="form-group">
+      <label for="inputPreco">Preço</label>
+      <input type="number" class="form-control" id="price" name="price" #p placeholder="129.90" required>
+    </div>
+
+		<div class="form-group">
+      <label for="inputEstoque">Estoque</label>
+      <input type="number" class="form-control" id="estoque" name="estoque" #e placeholder="50" required>
+    </div>
+
+    <div class="form-group">
+      <label for="inputFoto">Foto</label>
+      <input type="text" class="form-control" id="foto" name="foto" #f placeholder="https://a-static.mlcdn.com.br/1500x1500/bola-de-volei-8-0-profissional-ix-oficial-fivb-penalty/lojasvettore/7460550218/63fea538f13dff5b04f8b73290688ad9.jpg" required>
+    </div>
+
+    <input type="button" class="btn btn-primary" value="Adicionar" (click)="adicionar(n, d, p, e, f)" />
+	</form>
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+	</script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+	</script>
+</body>

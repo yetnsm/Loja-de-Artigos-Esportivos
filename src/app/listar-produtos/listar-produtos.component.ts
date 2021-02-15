@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Produto } from "../model/produto";
 import { ProdutoService } from '../model/produto.service';
 
@@ -13,7 +13,6 @@ export class ListarProdutosComponent implements OnInit {
   constructor(private prod: ProdutoService) { }
 
   produtos: Produto[];
-  showModalBox: boolean = false;
 
   ngOnInit() {
     this.produtos = [];
@@ -27,20 +26,4 @@ export class ListarProdutosComponent implements OnInit {
       }
     );
   }
-
-  deletarProduto(id: number): any {
-    this.prod.deletarProduto(id).subscribe(
-      (res) => {
-        this.produtos = res.prods;
-      }
-    );
-  }
-
-  public open() {
-     if(0) {
-       this.showModalBox = false;
-     } else {
-        this.showModalBox = true;
-     }
-   }
 }

@@ -8,7 +8,7 @@ import { ComprarProdutoComponent } from './comprar-produto/comprar-produto.compo
   imports: [
     RouterModule.forRoot([
       { path: 'catalog', component: ListarProdutosComponent },
-      { path: 'buy', component: ComprarProdutoComponent },
+      { path: 'buy/:id', component: ComprarProdutoComponent },
       { path: 'insert', component: InserirProdutoComponent },
       { path: '**', redirectTo: 'catalog' }
     ])
