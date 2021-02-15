@@ -1,5 +1,25 @@
-<app-listar-produtos></app-listar-produtos>
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+</head>
+
+<nav class="navbar navbar-dark bg-dark">
+  <div class="navbar-brand"><b>Loja de Esporte</b></div>
+
+  <a routerLinkActive="active" 
+    routerLink="/catalog">Catálogo de Produtos</a>
+
+  <a style="display:none;" routerLinkActive="active" 
+    routerLink="/buy">Comprar Produto</a>
+
+  <a routerLinkActive="active" 
+    routerLink="/insert">Inserir Novo Produto</a>
+</nav>
+
+
+
+<router-outlet></router-outlet>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>

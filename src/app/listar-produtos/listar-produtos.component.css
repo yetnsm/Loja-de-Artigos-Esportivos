@@ -3,22 +3,6 @@
   max-height: 100px;
 }
 
-* {
-  box-sizing: border-box;
-}
-
-.body {
-  background: #eee;
-  margin: 10px;
-}
-
-.title {
-  margin: 20px;
-  text-align: center;
-  align-items: center;
-  justify-items: center;
-}
-
 .column {
   float: center;
   width: 50%;
