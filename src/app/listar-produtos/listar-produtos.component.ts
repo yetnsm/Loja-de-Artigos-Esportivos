@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Produto } from "../model/produto";
 import { ProdutoService } from '../model/produto.service';
 
@@ -12,13 +12,13 @@ export class ListarProdutosComponent implements OnInit {
   constructor(private prod: ProdutoService) { }
 
   produtos: Produto[];
+  showModalBox: boolean = false;
 
   ngOnInit() {
     this.produtos = [];
     this.buscarProdutos();
   }
 
-  // exercicio 1
   buscarProdutos() {
     return this.prod.buscarProdutos().subscribe(
       (res) => {
@@ -27,7 +27,6 @@ export class ListarProdutosComponent implements OnInit {
     );
   }
 
-  // exercicio 3
   deletarProduto(id: number): any {
     this.prod.deletarProduto(id).subscribe(
       (res) => {
@@ -35,4 +34,12 @@ export class ListarProdutosComponent implements OnInit {
       }
     );
   }
+
+  public open() {
+     if(0) {
+       this.showModalBox = false;
+     } else {
+        this.showModalBox = true;
+     }
+   }
 }
