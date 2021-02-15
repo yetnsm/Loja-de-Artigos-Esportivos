@@ -18,11 +18,12 @@ export class ProdutoService {
     return this.http.get<any>(`${this.URL}buy/${id}`);
   }
 
-  comprar(id: number): Observable<any> {
+  comprar(id: any): Observable<any> {
+    alert(id);
     if (id == undefined) {
       alert("Nenhum produto encontrado.");
     } else {
-      return this.http.post<any>(`${this.URL}buy`, id);
+      return this.http.post<any>(`${this.URL}buy/${id}`, {id});
     }
   }
 

@@ -31,8 +31,8 @@ export class ComprarProdutoComponent implements OnInit {
     );
   }
 
-  comprar() {
-    return this.prod.comprar(this.id).subscribe(
+  comprar(id) {
+    return this.prod.comprar(id).subscribe(
       (res) => {
         this.produto = res;
       }

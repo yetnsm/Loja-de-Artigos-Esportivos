@@ -11,10 +11,11 @@ import { InserirProdutoComponent } from './inserir-produto/inserir-produto.compo
 import { ListarProdutosComponent } from './listar-produtos/listar-produtos.component';
 import { ComprarProdutoComponent } from './comprar-produto/comprar-produto.component';
 import { FinalizarComponent } from './finalizar/finalizar.component';
+import { AdicionarComponent } from './adicionar/adicionar.component';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, HttpClientModule, AppRoutingModule ],
-  declarations: [ AppComponent, HelloComponent, InserirProdutoComponent, ListarProdutosComponent, ComprarProdutoComponent, FinalizarComponent ],
+  declarations: [ AppComponent, HelloComponent, InserirProdutoComponent, ListarProdutosComponent, ComprarProdutoComponent, FinalizarComponent, AdicionarComponent ],
   bootstrap:    [ AppComponent ],
   providers: [ProdutoService]
 })
