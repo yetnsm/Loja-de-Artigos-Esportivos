@@ -41,9 +41,11 @@
       <label for="inputEndereco">Endereço</label>
       <input type="text" class="form-control" id="endereco" name="endereco" #end placeholder="Ex.: Av. das Acácias, 241" required>
     </div>
-
-    <input type="button" class="btn btn-primary" value="Comprar" (click)="comprar(produto.id)" />
   </form>
+
+  <a routerLinkActive="active" routerLink="/finalizar"> 
+        <button type="button" class="btn btn-primary" (click)="comprar()">Finalizar Compra</button>
+  </a>
 
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
 		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">

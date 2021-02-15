@@ -15,14 +15,7 @@ export class ProdutoService {
   }
 
   buscarProduto(id): Observable<any> {
-    return this.http.get<any>(`${this.URL}buy/:id`);
-  }
-
-  deletarProduto(id: number): Observable<any> {
-    if (id == undefined) {
-      alert("Nenhum produto encontrado.");
-    }
-    return this.http.delete<any>(`${this.URL}produtos/${id}`);
+    return this.http.get<any>(`${this.URL}buy/${id}`);
   }
 
   comprar(id: number): Observable<any> {

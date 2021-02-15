@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Observable } from 'rxjs';
 import { Produto } from '../model/produto';
 import { ProdutoService } from '../model/produto.service';
 
@@ -9,34 +11,28 @@ import { ProdutoService } from '../model/produto.service';
 })
 export class ComprarProdutoComponent implements OnInit {
 
-  constructor(private prod: ProdutoService) { }
+  constructor(private prod: ProdutoService, private route: ActivatedRoute) { }
   produto: Produto;
-  route;
+
+  id: any;
 
   ngOnInit() {
     this.produto = null;
 
-    let id;
-    this.route.paramMap.subscribe(params => {
-      id = params.get(0)
-    });
-    alert(id);
-
-    this.buscarProduto(id);
+    this.id = this.route.snapshot.paramMap.get('id');
+    this.buscarProduto(this.id);
   }
 
   buscarProduto(id) {
-    alert(id);
     return this.prod.buscarProduto(id).subscribe(
       (res) => {
-        this.produto = res[0];
-        alert(this.produto);
+        this.produto = res;
       }
     );
   }
 
-  comprar(id) {
-    return this.prod.comprar(id).subscribe(
+  comprar() {
+    return this.prod.comprar(this.id).subscribe(
       (res) => {
         this.produto = res;
       }

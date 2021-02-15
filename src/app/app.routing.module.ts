@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { ListarProdutosComponent } from './listar-produtos/listar-produtos.component';
 import { InserirProdutoComponent } from './inserir-produto/inserir-produto.component';
 import { ComprarProdutoComponent } from './comprar-produto/comprar-produto.component';
+import { FinalizarComponent } from './finalizar/finalizar.component';
 
 @NgModule({
   imports: [
@@ -10,6 +11,7 @@ import { ComprarProdutoComponent } from './comprar-produto/comprar-produto.compo
       { path: 'catalog', component: ListarProdutosComponent },
       { path: 'buy/:id', component: ComprarProdutoComponent },
       { path: 'insert', component: InserirProdutoComponent },
+      { path: 'finalizar', component: FinalizarComponent },
       { path: '**', redirectTo: 'catalog' }
     ])
   ],

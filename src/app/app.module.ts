@@ -10,10 +10,11 @@ import { AppRoutingModule } from './app.routing.module';
 import { InserirProdutoComponent } from './inserir-produto/inserir-produto.component';
 import { ListarProdutosComponent } from './listar-produtos/listar-produtos.component';
 import { ComprarProdutoComponent } from './comprar-produto/comprar-produto.component';
+import { FinalizarComponent } from './finalizar/finalizar.component';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, HttpClientModule, AppRoutingModule ],
-  declarations: [ AppComponent, HelloComponent, InserirProdutoComponent, ListarProdutosComponent, ComprarProdutoComponent ],
+  declarations: [ AppComponent, HelloComponent, InserirProdutoComponent, ListarProdutosComponent, ComprarProdutoComponent, FinalizarComponent ],
   bootstrap:    [ AppComponent ],
   providers: [ProdutoService]
 })
